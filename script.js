@@ -1,11 +1,8 @@
-function changeText() {
-    document.getElementById('text').innerText = "You clicked the button!";
-}
-
-
-$('.nav').click(function() {
-    var id = $(this).attr('id');
-    $('html, body').animate({
-        scrollTop: ($('#' + id + '.section').offset().top)
-    }, 1000);
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });

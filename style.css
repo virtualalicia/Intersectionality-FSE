@@ -1,47 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    justify-content: flex-start; /* Align items to the top */
-    align-items: center;
+body, html {
     margin: 0;
-    background: url('images/intersectionality2.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
+    background-image: url('images/intersectionality4.jpeg');
+    background-size: cover;
+    color: rgb(13, 13, 14);
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #c8f2dc;
-    color: #2e2828;
-    height: 8vh;
-    margin: 0;
-    padding: 1rem 0;
-    text-align: center;
-    margin-bottom: 20px; /* Add space below the header */
+    padding: 230px 0;
+}
+
+.header-content {
+    padding: 100px 0;
+    background: rgba(184, 208, 232, 0.5); /* Semi-transparent background */
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 nav {
-    margin-bottom: 20px; /* Add space below the navigation */
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add space between sections */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(171, 196, 217, 0.5);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 section {
-    padding: 1rem 0;
-    background-color: #f8fbf9;
-    color: #2e2828;
-    margin-bottom: 20px; /* Add space between sections */
+    padding: 80px;
+    height: 40vh;
 }
+
+#section1 { background: #f4f4f4; }
+#section2 { background: #e2e2e2; }
+#section3 { background: #d0d0d0; }
+#section4 { background: #f4f4f4; }
+#section5 { background: #e2e2e2; }
+
 
 footer {
     text-align: center;
@@ -51,19 +67,4 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
