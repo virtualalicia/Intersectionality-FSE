@@ -28,7 +28,6 @@ nav {
     left: 0;
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -47,9 +46,12 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Ensure section backgrounds are responsive */
 section {
     padding: 80px;
-    height: 40vh;
+    height: 100%; /* Use vh units for height */
+    width: 100%; /* Ensure sections take up full width */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 #section1 { background: #f4f4f4; }
@@ -57,6 +59,28 @@ section {
 #section3 { background: #d0d0d0; }
 #section4 { background: #f4f4f4; }
 #section5 { background: #e2e2e2; }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    section {
+        padding: 60px;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 20px;
+        height: fit-content;
+    }
+} 
 
 
 footer {
